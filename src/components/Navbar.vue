@@ -1,7 +1,8 @@
 <template>
   <div class="pure-menu pure-menu-horizontal">
     <div class="container">
-      <a href="/" class="pure-menu-heading pure-menu-link">Hackernews </a>
+      <!-- <a href="/" class="pure-menu-heading pure-menu-link">Hackernews </a> -->
+      <router-link class="pure-menu-heading pure-menu-link" to='/'>Hackernews</router-link>
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
           <!-- <a href="/" class="pure-menu-link">Upload</a> -->
