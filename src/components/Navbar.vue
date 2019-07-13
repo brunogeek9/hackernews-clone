@@ -1,10 +1,10 @@
 <template>
   <div class="pure-menu pure-menu-horizontal">
     <div class="container">
-      <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+      <a href="/" class="pure-menu-heading pure-menu-link">Hackernews </a>
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">News</a>
+          <a href="/" class="pure-menu-link">Upload</a>
         </li>
         <li class="pure-menu-item">
           <a href="#" class="pure-menu-link">Sports</a>
