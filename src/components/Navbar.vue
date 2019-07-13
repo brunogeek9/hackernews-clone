@@ -4,7 +4,8 @@
       <a href="/" class="pure-menu-heading pure-menu-link">Hackernews </a>
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
-          <a href="/" class="pure-menu-link">Upload</a>
+          <!-- <a href="/" class="pure-menu-link">Upload</a> -->
+          <router-link class="pure-menu-link" to='/single'>Upload</router-link>
         </li>
         <li class="pure-menu-item">
           <a href="#" class="pure-menu-link">Sports</a>
