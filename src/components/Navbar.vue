@@ -6,13 +6,13 @@
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
           <!-- <a href="/" class="pure-menu-link">Upload</a> -->
-          <router-link class="pure-menu-link" to='/single'>Upload</router-link>
+          <router-link class="pure-menu-link" to='/single'>Single component</router-link>
         </li>
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Sports</a>
+          <!-- <a href="#" class="pure-menu-link">Sports</a> -->
         </li>
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Finance</a>
+          <!-- <a href="#" class="pure-menu-link">Finance</a> -->
         </li>
         <li class="pure-menu-item" id="sobre">
           <router-link class="pure-menu-link" to='/about'>About</router-link>
@@ -29,6 +29,9 @@
 </script>
 
 <style scoped>
+  .container{
+    font-weight: bold;
+  }
   .pure-menu {
     background-color: #e17842;
   }
@@ -37,5 +40,6 @@
   }
   #sobre{
     float: right;
+    margin-right: 0;
   }
 </style>
