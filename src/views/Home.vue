@@ -3,7 +3,12 @@
     <h2>Homepage</h2>
     <div v-for="story in stories" :key="story">
       <h2>{{ story.title }}</h2>
-      <p>{{ story.url }}</p>
+      <p>
+        <router-link :to="{path: `/story/${story.id}`}">
+          {{ story.url }}
+        </router-link>
+        
+      </p>
       <p>Coments: {{ story.descendants }}</p>
       <p>Score: {{story.score}}</p>
     </div>
