@@ -14,6 +14,9 @@
         <li class="pure-menu-item">
           <a href="#" class="pure-menu-link">Finance</a>
         </li>
+        <li class="pure-menu-item" id="sobre">
+          <router-link class="pure-menu-link" to='/about'>About</router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -31,5 +34,8 @@
   }
   .pure-menu a {
     color: white;
+  }
+  #sobre{
+    float: right;
   }
 </style>
