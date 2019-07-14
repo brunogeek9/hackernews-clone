@@ -2,7 +2,10 @@
     <div class="container">
         <h2>{{story.title}}</h2>
         <p>Score: {{story.score}}</p>
-        <p>URL: {{story.url}}</p>
+        <p>
+            original source 
+            <a :href="story.url">Link: {{story.url}}</a>
+        </p>
         <br>
         <hr>
         <div class="coments" v-for="coment in coments" :key="coment.id">
