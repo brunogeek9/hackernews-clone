@@ -42,7 +42,7 @@ export default {
                 })
             }); 
         } catch (error) {
-            err = error;
+            this.err = error;
         }
     }
 }
