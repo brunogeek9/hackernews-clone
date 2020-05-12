@@ -44,13 +44,13 @@ export default {
     // https://hacker-news.firebaseio.com/v0/topstories.json
     try {
       // getting all ids
-      let response1 = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json');
+      let response1 = await axios.get('https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/topstories.json');
       var data = response1.data;
       this.storiesIds = data.slice(0,11);
       // this.gatAllNews();
       // getting all news
       this.storiesIds.forEach(id => {
-        axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/item/${id}.json`)
         .then((response2)=>{
           this.stories.push(response2.data)
         })

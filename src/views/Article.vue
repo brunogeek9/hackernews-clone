@@ -32,11 +32,11 @@ export default {
     async created(){
         
         try {
-            let res1 = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${this.$route.params.id}.json`);
+            let res1 = await axios.get(`https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/item/${this.$route.params.id}.json`);
             this.story = res1.data;
             this.story.coments = [];   
             this.story.kids.forEach(id => {
-                axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+                axios.get(`https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/item/${id}.json`)
                 .then((res2)=>{
                     this.coments.push(res2.data);
                 })
