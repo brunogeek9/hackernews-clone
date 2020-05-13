@@ -2,7 +2,7 @@
   "name": "hackernews-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/brunogeek9/hackernews-clone",
+  "homepage": "https://brunogeek9.github.io/hackernews-clone",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
