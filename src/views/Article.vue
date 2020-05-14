@@ -1,20 +1,18 @@
 <template>
   <div class="container">
-    <h2>{{story.title}}</h2>
-    <p>Score: {{story.score}}</p>
-    <p>
-      original source
-      <a :href="story.url" target="_blank">Link: {{story.url}}</a>
-    </p>
-    <br />
-    <hr />
-    <div class="coments" v-for="coment in coments" :key="coment.id">
-      <div class="coment-wrap">
-        <p>{{ coment.text }}</p>
-        <p>{{ coment.by }}</p>
-        <p>{{ coment.time }}</p>
+    <h2>{{ story.title }}</h2>
+    <p>Score: {{ story.score }}</p>
+    <p>{{ story.url }}</p>
+    <div v-for="comment in comments" :key="comment">
+      <div class="comment-wrap">
+        <div class="comment-block">
+          <p class="comment-text">{{ comment.text }}</p>
+          <div class="bottom-comment">
+            <div class="comment-author">{{ comment.by }}</div>
+            <div class="comment-date">{{ comment.time }}</div>
+          </div>
+        </div>
       </div>
-      <hr />
     </div>
   </div>
 </template>
@@ -26,23 +24,23 @@ export default {
     return {
       story: {},
       err: "",
-      coments: []
+      comments: []
     };
   },
   async created() {
     try {
       let res1 = await axios.get(
-        `https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/item/${this.$route.params.id}.json`
+        `https://hacker-news.firebaseio.com/v0/item/${this.$route.params.id}.json`
       );
       this.story = res1.data;
-      this.story.coments = [];
+      this.story.comments = [];
       this.story.kids.forEach(id => {
         axios
           .get(
-            `https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/item/${id}.json`
+            `https://hacker-news.firebaseio.com/v0/item/${id}.json`
           )
           .then(res2 => {
-            this.coments.push(res2.data);
+            this.comments.push(res2.data);
           });
       });
     } catch (error) {
