@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Homepage</h2>
+    <h2>Last Posts</h2>
     <item v-for="story in stories" :key="story.id" :story="story"></item>
   </div>
 </template>
@@ -10,7 +10,7 @@ import axios from "axios";
 import Item from "../components/Item";
 
 export default {
-  name: "home",
+  name: "new",
   components: {
     'item': Item
   },
@@ -27,7 +27,7 @@ export default {
     try {
       // getting all ids
       let response1 = await axios.get(
-        "https://hacker-news.firebaseio.com/v0/topstories.json"
+        "https://hacker-news.firebaseio.com/v0/newstories.json"
       );
       var data = response1.data;
       this.storiesIds = data.slice(0, 11);
