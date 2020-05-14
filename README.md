@@ -6,7 +6,7 @@
 HACKERNEWS-CLONE
 </h1>
 
-<p align="center">imple clone of hackernews implemented for learning purposes.</p>
+<p align="center">Simple clone of hackernews implemented for learning purposes.</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
