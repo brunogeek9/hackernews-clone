@@ -34,11 +34,11 @@ export default {
     
   },
   methods:{
-    async gatAllNews(){
-      let response1 = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json');
-      var data = response1.data;
-      this.storiesIds = data.slice(0,11);
-    }
+    // async gatAllNews(){
+    //   let response1 = await axios.get('https://cors-anywhere.herokuapp.com/https://hacker-news.firebaseio.com/v0/topstories.json');
+    //   var data = response1.data;
+    //   this.storiesIds = data.slice(0,11);
+    // }
   },
   async created(){
     // https://hacker-news.firebaseio.com/v0/topstories.json
