@@ -3,7 +3,8 @@
     <span class="score">{{ story.score }}</span>
     <router-link :to="{ path: '/story/' + story.id }">
       {{ story.title }}
-      <span>{{ story.url | host }}</span>
+      <br />
+      <span>{{story.url | host }}</span>
     </router-link>
     <br />
     <span class="meta">
@@ -19,15 +20,15 @@ export default {
   components: {
     // item: Item
   },
-data: function() {
+  data: function() {
     return {
       err: "",
       stories: []
     };
-  },
-//   created(){
+  }
+  //   created(){
 
-//   }
+  //   }
 };
 </script>
 

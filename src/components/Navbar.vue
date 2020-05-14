@@ -5,16 +5,9 @@
       <router-link class="pure-menu-heading pure-menu-link" to="/">Hackernews</router-link>
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
-          <!-- <a href="/" class="pure-menu-link">Upload</a> -->
-          <router-link class="pure-menu-link" to="/single">Single component</router-link>
-        </li>
-        <li class="pure-menu-item">
           <router-link class="pure-menu-link" to="/last">Last Posts</router-link>
         </li>
-        <li class="pure-menu-item">
-          <!-- <a href="#" class="pure-menu-link">Finance</a> -->
-        </li>
-        <li class="pure-menu-item" id="sobre">
+        <li class="pure-menu-item" id="about">
           <router-link class="pure-menu-link" to="/about">About</router-link>
         </li>
       </ul>
@@ -33,13 +26,18 @@ export default {
   font-weight: bold;
 }
 .pure-menu {
-  background-color: #e17842;
+  /* background-color: #e17842; */
+  background-color: black;
+
+}
+.pure-menu a:hover{
+  color: black;
 }
 .pure-menu a {
   color: white;
 }
-#sobre {
-  float: right;
-  margin-right: 0;
-}
+/* #about {
+  margin-right: 0%;
+  margin-left: 100%;
+} */
 </style>
