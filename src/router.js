@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Single from './components/Single'
 import Article from './views/Article'
-
+import Last from './views/New'
 Vue.use(Router)
 
 export default new Router({
@@ -14,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/last',
+      name: 'last',
+      component: Last
     },
     {
       path: '/about',
