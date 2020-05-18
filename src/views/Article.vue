@@ -1,8 +1,12 @@
 <template>
   <div class="container">
     <h2>{{ story.title }}</h2>
+    <p>Link to original article:</p>
+    <a :href="story.url" target="_blank">
+      <p>{{ story.url | host}}</p>
+    </a>
     <p>Score: <span>{{ story.score }}</span> </p>
-    <p v-html="story.url" @click="clickArticle">{{ story.url | host}}</p>
+    
     <div v-for="comment in comments" :key="comment">
       <div class="comment-wrap">
         <div class="comment-block">
@@ -48,14 +52,21 @@ export default {
     }
   },
   methods:{
-    clickArticle(){
-      windown.location = "http://github.com";
-    },
+    // clickArticle(){
+    //   windown.location = "http://github.com";
+    // },
   }
 };
 </script>
 
 <style scoped>
+span{
+  font-weight: bold;
+}
+
+a{
+  color : #f60;
+}
 .comment-wrap {
   margin-bottom: 1.25rem;
   display: table;
