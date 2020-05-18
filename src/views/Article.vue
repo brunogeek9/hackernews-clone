@@ -5,8 +5,8 @@
     <a :href="story.url" target="_blank">
       <p>{{ story.url | host}}</p>
     </a>
-    <p>Score: <span>{{ story.score }}</span> </p>
-    
+    <p>score: <span>{{ story.score }}</span> </p>
+    <p>total reviews: <span>{{comments.length}}</span></p>
     <div v-for="comment in comments" :key="comment">
       <div class="comment-wrap">
         <div class="comment-block">
