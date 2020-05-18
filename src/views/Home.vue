@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Homepage</h2>
+    <h2>Home</h2>
     <item v-for="story in stories" :key="story.id" :story="story"></item>
   </div>
 </template>
@@ -50,3 +50,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+h2{
+  margin-bottom: 10px;
+}
+</style>
