@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <h2>{{ story.title }}</h2>
-    <p>Score: {{ story.score }}</p>
-    <p>{{ story.url }}</p>
+    <p>Score: <span>{{ story.score }}</span> </p>
+    <p v-html="story.url" @click="clickArticle">{{ story.url | host}}</p>
     <div v-for="comment in comments" :key="comment">
       <div class="comment-wrap">
         <div class="comment-block">
-          <p class="comment-text">{{ comment.text }}</p>
+          <p class="comment-text" v-html="comment.text">{{ comment.text }}</p>
           <div class="bottom-comment">
             <div class="comment-author">{{ comment.by }}</div>
             <div class="comment-date">{{ comment.time }}</div>
@@ -46,6 +46,11 @@ export default {
     } catch (error) {
       this.err = error;
     }
+  },
+  methods:{
+    clickArticle(){
+      windown.location = "http://github.com";
+    },
   }
 };
 </script>
