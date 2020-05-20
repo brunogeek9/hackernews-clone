@@ -16,9 +16,9 @@ HACKERNEWS-CLONE
 
 [//]: # (Add your gifs/images here:)
 <div align="center">
-    <img src="images/print01.png" alt="demo" height="325" width="600">
-    <img src="images/print02.png" alt="demo" height="325" width="600">
-    <img src="images/print03.png" alt="demo" height="325" width="600">
+    <img src="images/print01.jpg" alt="demo" height="325" width="600">
+    <img src="images/print02.jpg" alt="demo" height="325" width="600">
+    <img src="images/print03.jpg" alt="demo" height="325" width="600">
 </div>
 
 <hr />
